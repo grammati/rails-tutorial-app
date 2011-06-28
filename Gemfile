@@ -9,6 +9,8 @@ gem 'pg'
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
+
+# Comment out coffee-script and uglifier because of heroku
 #gem 'coffee-script'
 #gem 'uglifier'
 
@@ -30,5 +32,6 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'webrat'
+  gem 'spork', '0.9.0.rc8'
 end
 
