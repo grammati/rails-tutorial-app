@@ -8,23 +8,33 @@
   <!--[if lt IE 8]>
     <%= stylesheet_link_tag    "/stylesheets/blueprint/ie.css", media: 'screen,projection' %>
   <![endif]-->
+
   <%= javascript_include_tag "application" %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <div class="container">
 
-    <div class="span-24">
-      Top-bar
+    <div class="span-24 top">
+      <%= image_tag("logo.png", alt: "Sample App", class: "round")  %>
     </div>
 
     <div class="span-4 colborder">
-      Nav
+      <ul>
+        <li><%= link_to "Home", "#" %></li>
+        <li><%= link_to "Help", "#" %></li>
+        <li><%= link_to "Sign In", "#" %></li>
+      </ul>
     </div>
+
     <div class="span-15">
       <%= yield %>
     </div>
+
     <div class="span-4 last">
       Right
     </div>
